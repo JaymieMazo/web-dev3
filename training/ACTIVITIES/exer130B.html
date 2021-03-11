@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letters</title>
+</head>
+<body>
+    <script>
+
+         var numbers = ["1","11","111","1111","11111","2","22","222","3","33","333","4","44","444","5","55","555","6","66","666","7","77","777","7777","8","88","888","9","99","999","9999",
+         "2","22","222","3","33","333","4","44","444","5","55","555","6","66","666","7","77","777","7777","8","88","888","9","99","999","9999","0"];
+         var chars = [".",",","?","!",";","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z",
+         "A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"," "];
+         var $final_out = "";
+         var mess = prompt("Enter message here:");
+
+         for (var i = 0; i <= mess.length - 1; i++){
+             var getchar = mess[i];
+             for (var j = 0; j <= numbers.length - 1; j ++)
+             if  (mess[i] == chars[j]){
+                 var getnum = numbers[j];
+                 $final_out += getnum;
+             }
+             else {              
+             }
+         }
+          alert($final_out); 
+            
+    </script>
+</body>
+</html>

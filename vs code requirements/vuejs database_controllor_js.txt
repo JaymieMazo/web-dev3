@@ -1,0 +1,270 @@
+const express = require("express");
+const bodyParser = require("body-parser");
+// Connection
+const nano = require("nano")("http://root:admin@hrdapps48:5984");
+const masterlist = nano.db.use("hrd_masteruser");
+//
+const cors = require("cors");
+const router = express.Router();
+
+router.use(cors()); //Cross-Origin Resource Sharing (CORS)
+router.use(bodyParser.urlencoded({ extended: false }));
+router.use(bodyParser.json());
+
+var knex = require("knex")({
+  client: "mssql",
+  connection: {
+    host: "hrdsql",
+    user: "sa",
+    password: "81at84",
+    database: "CompanyInformation"
+  }
+});
+
+var test = require("knex")
+({
+  client: "mssql",
+  connection: 
+	{
+    	host: "SD_SQL_TRAINING",
+    	user: "sa",
+    	password: "81at84",
+    	database: "Charnel_Explore"
+  	}
+});
+
+// Get date()
+var today = new Date();
+var dd = today.getDate();
+var mm = today.getMonth()+1;
+var yyyy = today.getFullYear();
+var hh = today.getHours()
+var min = today.getMinutes()
+var ss = today.getSeconds()
+
+if(dd<10)
+{
+    dd='0'+dd;
+}
+if(mm<10)
+{
+    mm='0'+mm;
+}
+if (hh<10) {
+hh = '0'+hh
+}
+if (min<10) {
+min = '0'+min
+}
+today = yyyy+'/'+mm+'/'+dd+' '+hh+':'+min+':'+ss
+//
+
+//Upload image
+const multer = require('multer');
+const storage = multer.diskStorage(
+  {
+    destination:'./uploads/request_images',
+    filename: function (req, file, cb) {
+      let d = new Date();
+      cb(null, d.getFullYear() + "-" + file.originalname)
+    }
+  }
+)
+var upload = multer({ storage: storage })
+router.post('/uploadSingleFile', upload.single('file'), (req, res)=>{
+  console.log(req.file)
+})
+
+// Nike
+router.get("/Nike", (req, res) => {
+  // console.log(req.body)
+  test
+  .select("*")
+  .from("Nike")
+    .then(GetData => {
+      // console.log(GetData);
+      res.send(GetData);
+    })
+    .catch(err => {
+      res.send(err);
+    });
+});
+
+// Auto increment shoe id
+router.get("/ShoeID", (req, res) => {
+test.select('ShoeID').from("Nike")
+.orderBy('ShoeID', 'desc')
+.first()
+.then(function(ID) {
+  // console.log(ID)
+  res.send(ID);
+})
+.catch(err => {
+  res.send(err);
+});
+});
+
+// Create shoes
+router.post("/CreateShoes", (req, res) => {
+  // console.log(req.body);
+  test("Nike")
+    .insert({
+      ShoeName: req.body.ShoeName,
+      Price: req.body.Price,
+      Stock: req.body.Stock,
+      Description: req.body.Description,
+      ImgUrl: req.body.ImgUrl,
+      Status: 'Available',
+      CreatedDate: today,
+      UpdatedDate: today
+    })
+    .then(result => {
+      console.log(result);
+      res.send("save");
+    })
+    .catch(err => {
+      console.log(err.message);
+    });
+});
+
+// Edit shoe
+router.post("/EditShoe", (req, res) => {
+  console.log(req.body);
+  test("Nike")
+    .where("EmployeeNo", "=", req.body.EmployeeNo)
+    .update({
+      Password: req.body.Password,
+      EmployeeName: req.body.EmployeeName,
+      AccountType: req.body.AccountType
+    })
+    .then(result => {
+      console.log(result);
+      res.send("save");
+    })
+    .catch(err => {
+      console.log(err.message);
+    });
+});
+
+//Load data Account
+router.get("/Account", (req, res) => {
+  // console.log(req.body)
+  test
+    .select("*")
+    .from("Accounts")
+    .then(GetData => {
+      // console.log(GetData);
+      res.send(GetData);
+    })
+    .catch(err => {
+      res.send(err);
+    });
+});
+
+// Insert data
+router.post("/CreateAccount", (req, res) => {
+  console.log(req.body);
+  test("Accounts")
+    .insert({
+      EmployeeNo: req.body.EmployeeNo,
+      Password: req.body.Password,
+      EmployeeName: req.body.EmployeeName,
+      AccountType: req.body.AccountType,
+      CreatedDate: today,
+      UpdatedDate: today
+    })
+    .then(result => {
+      // console.log(result);
+      res.send("save");
+    })
+    .catch(err => {
+      console.log(err.message);
+    });
+});
+
+// Edit data
+router.post("/EditAccount", (req, res) => {
+  console.log(req.body);
+  test("Accounts")
+    .where("EmployeeNo", "=", req.body.EmployeeNo)
+    .update({
+      Password: req.body.Password,
+      EmployeeName: req.body.EmployeeName,
+      AccountType: req.body.AccountType
+    })
+    .then(result => {
+      console.log(result);
+      res.send("save");
+    })
+    .catch(err => {
+      console.log(err.message);
+    });
+});
+
+//Login
+router.post("/Employee", (req, res) => {
+  // console.log(req.body)
+  knex
+    .select("*")
+    .from("Employees")
+    .where("EmployeeCode", "=", req.body.user)
+    .andWhere("EmployeeCode", "=", req.body.pass)
+    .then(data => {
+      userInfo = [{
+          EmployeeCode: data[0].EmployeeCode,
+          EmployeeName: data[0].EmployeeName
+          // DepartmentCode: data[0].DepartmentCode,
+          // SectionCode: data[0].SectionCode,
+          // TeamCode: data[0].TeamCode,
+          // Gender: data[0].Gender,
+        }];
+      // console.log(userInfo);
+      res.send(userInfo);
+    })
+    .catch(err => {
+      res.send("");
+    });
+});
+
+// Login
+router.post("/", (req, res) => {
+  const query = {
+    selector: {
+      $and: [
+        { employee_code: req.body.user },
+        { password: req.body.pass },
+        {
+          $or: [
+            {
+              eStatus: "Active"
+            },
+            {
+              eStatus: "Dummy"
+            }
+          ]
+        }
+      ]
+    }
+  };
+
+
+
+
+  // masterlist.find(query).then(body => {
+  //   if (body.docs[0]) {
+  //     userInfo = [
+  //       {
+  //         employeeCode: body.docs[0].employee_code,
+  //         fullName: body.docs[0].full_name,
+  //         department: body.docs[0].department,
+  //         section: body.docs[0].section,
+  //         team: body.docs[0].team
+  //       }
+  //     ];
+  //     res.send(userInfo);
+  //   } else {
+  //     res.send("");
+  //   }
+  // });
+});
+module.exports = router;

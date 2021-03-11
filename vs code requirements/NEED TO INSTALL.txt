@@ -1,0 +1,3 @@
+download izitoast for messages  
+1)cd client
+2)npm install izitoast --save

@@ -1,0 +1,62 @@
+server side----------------------
+
+
+set https_proxy=http://hrdproxy.hrd-s.com:81
+npm init
+
+
+[enter enter daw]
+
+yarn add nano winser express cors body-parser
+yarn global add nodemon
+
+yarn global add @vue/cli
+npm install -g @vue/cli
+
+client side----------------------
+
+set https_proxy=http://hrdproxy.hrd-s.com:81
+
+vue create client
+*manual--babel,router,vuex,css pre-processor,linter
+*Yes
+*Sass/SCSS (with dart-sass)
+*basic
+*lint on save
+*in dedicated config files
+*YES
+*myPreset
+
+cd client
+yarn serve
+
+2125770 
+
+
+import Vuelidate from 'vuelidate'
+Vue.use(Vuelidate);
+vue add vuetify
+*Default
+
+---modules
+yarn add @mdi/font -D
+yarn add axios
+
+*client--plugins--vuetify.js*
+----------------------------------------------
+import '@mdi/font/css/materialdesignicons.css' // Ensure you are using css-loader
+import Vue from 'vue'
+import Vuetify from 'vuetify/lib'
+
+Vue.use(Vuetify)
+
+export default new Vuetify({
+  icons: {
+    iconfont: 'mdi', // default - only for display purposes
+  },
+});
+----------------------------------------------
+
+
+
+ @blur="$v.uname.$touch()"

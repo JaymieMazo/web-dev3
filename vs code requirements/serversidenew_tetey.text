@@ -1,0 +1,56 @@
+set https_proxy=http://hrdproxy.hrd-s.com:81
+vue create client
+*manual--babel,router,vuex,css pre-processor,linter
+*Yes
+*Sass/SCSS (with dart-sass)
+*basic
+*lint on save
+*in dedicated config files
+*YES
+*myPreset
+
+cd client
+yarn serve
+
+
+Server Side 
+step 1: create new folder and name it server 
+step 2: cd server
+step 3: yarn init
+step 4: 	set https_proxy=http://hrdproxy.hrd-s.com:81
+	yarn add express nano winser cors
+step 5: yarn global add nodemon
+step 6: open your visual studio then go to server folder then do this
+	-create folder and name it routes
+	-create controller.js inside routes folder
+	-create index.js file inside server folder
+step 7: add this to your index.js
+	const express = require ('express');
+	const port = 5000;
+	const router = require('./routes/controller.js');
+	const app = express();
+	app.use('/',router);
+	app.listen(port, function() {
+		console.log('listening to port'+port);
+	})
+step 8: add this to your controller.js
+
+	const express = require('express')
+	const bodyParser = require('body-parser')
+	const nano = require('nano')('http://localhost:5984')
+	const myDB = nano.db.use('db_name');
+	const cors = require('cors')
+	const router = express.Router();
+	
+	router.use(cors()) //Cross-Origin Resource Sharing (CORS)
+	router.use(bodyParser.urlencoded({ extended: false }))
+	router.use(bodyParser.json())
+
+	router.get('/',(req,res) => {
+		res.send('projectname - hello world - port5000')
+		});
+
+module.exports = router;
+
+
+

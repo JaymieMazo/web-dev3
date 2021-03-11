@@ -1,0 +1,61 @@
+.mediamodalfine {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.media-modal-content-fine {
+    position: relative;
+    background-color: whitesmoke;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 25%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    animation-name: animatetopfine;
+    animation-duration: 0.4s;
+}
+
+@keyframes animatetopfine {
+    from {
+        top: -300;
+        opacity: 0
+    }
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+.media-close-fine {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: relative;
+}
+
+.media-close-fine:focus,
+.media-close-fine:hover {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.media-modal-header-fine {
+    padding: 2px 16px;
+    background-color: #414141;
+    color: whitesmoke;
+}
+
+.modal-body {
+    padding: 2px 16px;
+}

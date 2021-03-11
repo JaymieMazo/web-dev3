@@ -1,0 +1,12 @@
+dialog box when view employee details
+
+employees performance 
+-attendance viewing
+-file storage of achievement/certificates
+-view awards
+-inspirational quotes 
+
+employee tasks
+alarm for meetings
+record daily  output 
+deleted employee logs

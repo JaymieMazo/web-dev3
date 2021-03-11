@@ -1,0 +1,171 @@
+body {
+    font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+    height: 100%;
+    width: 21%;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background: #0062cc;
+    overflow-x: hidden;
+    padding-top: 20px;
+    box-shadow: 5px -0px 5px gray;
+    float: left;
+    /* overflow: hidden; */
+}
+
+.sidenav a,
+.dropdown-btn {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: whitesmoke;
+    display: block;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+}
+
+.sidenav .nav-main:hover,
+.dropdown-btn:hover {
+    color: #f1f1f1;
+    text-decoration: none;
+    background-color: rgb(139, 174, 238);
+}
+
+.dropdown-container {
+    display: none;
+    background-color: white;
+    /* padding-left:5px; */
+}
+
+.fa-caret-down {
+    margin-top: 10px;
+    float: right;
+    padding-right: 10px;
+}
+
+.dropdown-container .addnew_a {
+    color: #0062cc;
+    font-size: 20px;
+    text-decoration: none;
+    width: 100%;
+}
+
+.dropdown-container .addnew_a:hover {
+    background-color: rgb(139, 174, 238);
+    color: whitesmoke;
+}
+
+.i_paddingright {
+    padding-right: 10px;
+}
+
+
+/* main css */
+
+.main {
+    /* Same as the width of the sidenav */
+    /* Increased text to enable scrolling */
+    padding: 0px 10px;
+    width: 79%;
+    float: right;
+}
+
+.main_searchTitle_div {
+    margin-top: 10px;
+    width: 100%;
+    position: relative;
+}
+
+.main_searchTitle_div input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+}
+
+.main_searchTitle_div button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: #2196F3;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+}
+
+.main_searchTitle_div button:hover {
+    background-color: #0062cc;
+}
+
+.filter {
+    background-color: gray;
+}
+
+
+/* end of main css */
+
+.filter {
+    background-color: gray;
+}
+
+.addcustomer_div {
+    margin-left: 300px;
+    padding: 0px 10px;
+    display: none;
+}
+
+.addemployee_div {
+    margin-left: 300px;
+    padding: 0px 10px;
+    display: none;
+}
+
+.addmedia_div {
+    margin-left: 300px;
+    padding: 0px 10px;
+    display: none;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
+.logout {
+    /* background: none!important; */
+    padding: 0 10px 5px 10px;
+    Background-color: rgb(241, 97, 97);
+    border: none;
+    /* padding: 0!important; */
+    /*optional*/
+    font-family: arial, sans-serif;
+    /*input has OS specific font-family*/
+    color: white;
+    cursor: pointer;
+    display: block;
+    box-sizing: border-box;
+    float: left;
+}
+
+.dropdown-btn {
+    border: none;
+}
+
+.logout:hover {
+    background-color: red;
+}

@@ -1,0 +1,36 @@
+Accenture is a multinational company providing services in strategy, consulting, digital, technology and operations. It offers graduate schemes in a number of areas, including analytics, consulting and software engineering.
+
+
+
+What is your ideal job?
+
+What is your thesis?    Scitwist -educational mobile game app developed using Java 
+What programming language do you know?     vb6, html w/css , nodejs/laa
+Where did you take your ojt? i  ntramuros manila , a printing press company
+What are the programming languages you know of? Name only 3.
+Your ideal job and salary any prgramming related-job , 23k-25k
+What's your view on obedience?   it is important in every profession, you will not be successful in any field if you dont posssess this values.  in my current work , there are so many rule even eating insid and bring cp inside the workplace is prohibited, it is important because you can have a bad record and they can terminate you if you are not obedient to their rules. 
+
+Have you ever handled a difficult client?
+yes , in my current work , theres a time that the requester calle 
+If I'm willing to work on various schedule.8:53 2021/02/04
+
+Why Accenture?  
+How do you create a system?  
+Where do you see yourself in 5 years?  
+Why did you take up ECE? (my course)
+What are the 3 qualities you look in a company?
+Where do you see yourself in 5 years?
+What was the toughest challenge you have experienced?
+What programming language do you know? Rate yourself.
+Why did you leave your last job? (I have 2 years exp)
+School-related questions (Any honors? Leadership experience? Failing grades?)
+ Expected salary?
+What is/are your experience(s) in developing Java applications  
+What was our thesis about and what were my contributions?  
+<style scoped>
+div{
+    background-color: cadetblue;
+}
+</style>
+

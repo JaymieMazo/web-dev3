@@ -1,0 +1,26 @@
+     <!-- <v-col>
+                           <v-select 
+                                  :items="filteredDept"
+                                  item-text="department_name"
+                                  item-value="department_code"
+                                  label="Select Department" 
+                            >  
+                              </v-select>  
+                </v-col> -->
+
+
+
+//13:24 2021/02/01
+
+
+
+
+
+
+
+companycode_orig , deptcode_orig 
+company_code_input , deptname_input , 
+update company-code and deptname where company_code =companycode_orig and dept_code =dept_orig
+
+
+

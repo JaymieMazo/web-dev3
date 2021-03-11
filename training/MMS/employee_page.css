@@ -1,0 +1,310 @@
+body {
+    font-family: NotoSans, Arial, "Arial Unicode MS", sans-serif;
+    background-color: rgb(219, 219, 219);
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    float: center;
+    direction: ltr;
+    /* position: relative; */
+}
+
+.header {
+    width: 75%;
+    padding: 5px 5px 5px 5px;
+    background-color: white;
+    height: 45px;
+    margin: auto;
+    position: relative;
+}
+
+.header a {
+    text-align: left;
+    font-size: 25px;
+    padding-left: 20px;
+}
+
+.logo img {
+    width: 70px;
+    height: 70px;
+    float: left;
+    margin-top: -7px;
+    margin-top: -7px;
+    position: relative;
+}
+
+.websitename {
+    float: left;
+    width: auto;
+    text-align: left;
+    margin-left: 10px;
+    position: relative;
+}
+
+.search_engine {
+    width: 50%;
+    float: right;
+}
+
+.search_engine input {
+    float: right;
+    height: 30px;
+    width: auto;
+    padding: 18px;
+    /* border-left:none; */
+    /* border-radius:2px; */
+}
+
+.search_engine .search {
+    float: right;
+    border-radius: 0px;
+    background-color: transparent;
+    border-left: none;
+}
+
+.fa-user-circle {
+    float: right;
+    font-size: 30px;
+    color: #4e4d57;
+}
+
+.navi {
+    width: 100%;
+    height: 40px;
+    background-color: #414141;
+    /* position: absolute; */
+}
+
+.fa-search {
+    color: gray;
+    background-color: transparent;
+}
+
+.search:hover {
+    background-color: #4e4d57;
+}
+
+.logout {
+    background-color: transparent;
+    border: none;
+    color: #4e4d57;
+    float: right;
+    padding-right: 20px;
+    font-size: 20px;
+    position: relative;
+}
+
+.search_engine a {
+    width: auto;
+}
+
+.navi .maincont {
+    float: left;
+    font-size: 16px;
+    color: whitesmoke;
+    text-align: center;
+    padding: 6px 5px;
+    text-decoration: none;
+    padding-bottom: 10px;
+    border: none;
+}
+
+.dropdownn {
+    float: left;
+    overflow: hidden;
+}
+
+.dropbutton {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: whitesmoke;
+    padding: 6px 5px;
+    background-color: inherit;
+    font-family: inherit;
+    margin-right: 100px;
+    font-weight: bold;
+}
+
+.navicon {
+    width: 75%;
+    margin: auto;
+    padding-left: 100px;
+    position: relative;
+}
+
+.drop-contents {
+    display: none;
+    position: relative;
+    left: -50%;
+    /* padding-left:1px; */
+    float: left;
+    background-color: white;
+    width: 100%;
+    height: 100px;
+    margin: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-contents a {
+    color: #4e4d57;
+}
+
+.dropdown-contents a:hover {
+    text-decoration: underline;
+}
+
+.modalimage {
+    width: 100%;
+    height: 0;
+}
+
+.navicon .maincont {
+    margin-right: 50px;
+    font-weight: bold;
+}
+
+.i_paddingright {
+    padding-right: 10px;
+}
+
+
+/* .maincont:hover,button:hover{
+    background-color:black;
+} */
+
+.dropbutton:hover {
+    cursor: pointer;
+}
+
+.header2nd {
+    width: 75%;
+    margin: auto;
+    position: absolute;
+    left: 50%;
+}
+
+.subcont,
+.subcont1,
+.subcont2,
+.subcont3,
+.subcont4 {
+    color: #4e4d57;
+    padding-left: 100px;
+    padding-top: 20px;
+    /* z-index:2; */
+    position: relative;
+    display: none;
+}
+
+
+/* mainbody */
+
+.mainbody {
+    width: 75%;
+    padding: 5px 5px 5px 5px;
+    background-color: white;
+    /* height: 900px; */
+    margin: auto;
+    position: relative;
+}
+
+
+/* .filter form{
+      float:left;
+      
+  } */
+
+.filter {
+    width: 100%;
+    height: 130px;
+    background-color: transparent;
+    position: relative;
+    margin: auto;
+    border: 1px solid #414141;
+    /* border-radius:10px; */
+    padding: 10px;
+    overflow: scroll;
+    overflow-x: hidden;
+    /* overflow-y:hidden; */
+}
+
+.selectMediaType {
+    /* margin:13px; */
+    float: left
+}
+
+#selType {
+    display: block;
+    width: 100%;
+    height: 31px;
+}
+
+#selTypeId {
+    display: block;
+    margin: 0px;
+    font-size: 13px;
+}
+
+#selYear,
+#selBranch {
+    display: block;
+    width: 100%;
+    height: 31px;
+}
+
+#selYearlbl,
+#selBranchlbl {
+    display: block;
+    margin: 0px;
+    font-size: 13px;
+}
+
+#lbltitle,
+#inptitle {
+    display: block;
+}
+
+#lbltitle {
+    margin: 0;
+    font-size: 13px;
+}
+
+#lblauthor {
+    margin: 0;
+    font-size: 13px;
+    display: block;
+}
+
+ ::-webkit-scrollbar {
+    width: 10px;
+}
+
+
+/* Track */
+
+ ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+
+/* Handle */
+
+ ::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+
+/* Handle on hover */
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.bookstylediv {
+    width: 89%;
+    max-height: 815px;
+    overflow: scroll;
+    overflow-x: hidden;
+    margin-left: 50px;
+}

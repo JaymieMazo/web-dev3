@@ -1,0 +1,42 @@
+import { mapState, mapMutations } from 'vuex'
+
+const myPlugins = {
+    install(Vue) {
+        Vue.mixin({
+            data: () => ({}),
+            computed: {
+                ...mapState([
+                    'view',
+                    'G_loading'
+                ])
+            },
+            methods: {
+                ...mapMutations([
+                    'viewData',
+                    'setGLoadT',
+                    'setGLoadF'
+                ])
+            }
+        })
+    }
+}
+
+export default myPlugins
+
+
+
+
+
+
+app.js
+import myPlugins from "./Myplugins";
+Vue.use(myPlugins);
+
+
+
+path: '/login',
+            name: 'login',
+            component: Login,
+            beforeEnter(to, from, next) {
+                store.state.logged_in === 1 ? next('/home') : next('')
+            }

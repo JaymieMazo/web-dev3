@@ -1,0 +1,39 @@
+The Java SE Development Kit, or JDK, is an extended subset of tools that allow for developing applications for the Java programming language.
+
+The installation process is very straight forward:
+
+1. Navigate to the Java SE Downloads page
+
+
+
+Examples of questions that have been asked during Accenture interviews:
+
+Tell us more about yourself?
+What are your reasons for wanting to join Accenture?
+What do you find interesting in the particular area that you applied to?
+What does Accenture do as a company?
+How does Accenture use technology to help its clients?
+Tell me about a situation when you had to provide support and service to someone
+Tell us of a time when you had to work with a difficult team member, and how you solved this problem
+Tell us about a time when you had to step up and show your leadership skills
+Tell us about a time when you were faced with an unconventional problem and had to use your creativity to solve it
+Tell us about the most challenging project you worked on, and what you’ve learned from it
+Tell me about the situation when you had to show your integrity
+
+
+
+Accenture Digital Interview Tips and Tricks:
+
+At minimum browse through the Accenture website, read some news to understand what the company does, what are their line of business, what they specialize in, what are the current business challenges they face
+For ‘Tell me about yourself question’ – do not talk about your family; you should briefly explain your key career path, key achievements, education; stay succinct. This applies to all companies you are applying to.
+For other questions “Tell me…” – we’d recommend you use and follow a STAR (Situation, Task, Action, Result) model, in which you need to refer to each of the four points mentioned above; explain what the particular situation was, what task you were faced with, what action you took and what the result was. Before your interview, think of a few situations from your personal, professional or student life that can be presented using a full STAR model
+
+
+Check recent awards Accenture won or projects they supported and try to link these to your experiences and interests.
+
+
+
+ Therefore, come equipped with some interesting and thought-provoking questions, which you are likely to be able to ask at the end of your interview. You should always use this opportunity to engage in a conversation with a senior member of the team, to demonstrate that you are motivated and enthusiastic about the prospect of working at Accenture. Do not be afraid to ask your interviewer about their personal experiences with the company, and their career path.
+
+
+heir recent developments and planned structural changes, as well as changes in the industry and potential future opportunities that are relevant to Accenture. These can form the basis of interesting conversations with senior members of the business, and thus demonstrate that you are an eloquent, motivated and bright individual.
